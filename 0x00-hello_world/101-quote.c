@@ -3,7 +3,7 @@
 /**
  * main -this prints exactly followed by a new line
  *
- * Return 1 if (success)
+ * Return: 1 if (success)
  */
 int main(void)
 {
