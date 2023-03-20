@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-*main-prints the size of vars on the computer its run on.
+*main - prints the size of vars on the computer its run on.
 *Return: always 0 on success
 */
 int main(void)
