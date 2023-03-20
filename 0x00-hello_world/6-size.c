@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
-*main - prints the size of vars on the computer its run on.
-*Return: always 0 on success
-*/
+ * main -print size
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
 	printf("Size of a char: %lu byte(s)\n", sizeof(char));
