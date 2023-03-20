@@ -1,8 +1,11 @@
 #include <stdio.h>
 /**
- * main - this will print char
+ * main - The code first prints the size of a char, then an int, then a long int          
+ *        , followed by a long long int, and finally the size of a float.
  *
- * Return: always 0 (success)
+ *        on the computer it is compiled and run on.
+ *
+ * Return: always 0 on success
  */
 
 int main(void)
