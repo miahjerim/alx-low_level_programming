@@ -9,7 +9,7 @@
  *
  * @n: number of times to copy b
  *
- * REturn: pointer to the memory area s
+ * Return: pointer to the memory area s
  */
 
 char *_memset(char *s, unsigned int n, char b)
@@ -34,13 +34,14 @@ char *_memset(char *s, unsigned int n, char b)
  *
  * @size: size of each element
  *
- * REturn: pointer to allocated memory
+ * Return: pointer to allocated memory
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 
 {
 	char *ptr;
+
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
