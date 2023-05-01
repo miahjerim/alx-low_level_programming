@@ -3,28 +3,30 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- *print_listint - prints all elements
- *@h: pointer to first node
+ * print_listint - prints all elements of listint_t
+ * @h: pointer to the first node of listint_t
  *
- *Return: number of nodes
+ * Return: number of nodes
  */
 
-/*function prototype*/
 size_t print_listint(const listint_t *h)
 {
-	/*count variable initialization*/
-	size_t n = 0;
+	/*initialize count variable to 0*/
+	size_t count = 0;/*keeps track of elements of listint_t*/
 
-	/*function loop to iterate through the list*/
-	while (h)
+	/*while loop itteration*/
+	while (h != NULL)
 	{
-	/*print value of current node*/
-	printf("%d\n", h->n);
-	/*moves to next node*/
-	h = h->next;
-	/*count variable incremented by 1*/
-	n++;
+		/*prints value of current node*/
+		printf("%d\n", h->n);
+
+		/*updates h to point to next node*/
+		h = h->next;
+		/*increament count variable*/
+		count++;
 	}
-	/*returns count.. number of nodes in the list*/
-	return n;
+	/*return count the elements of listint_t*/
+	return (count);
 }
+
+
