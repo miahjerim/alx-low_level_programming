@@ -1,7 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 /**
  * print_listint - prints all elements of listint_t
  * @h: pointer to the first node of listint_t
