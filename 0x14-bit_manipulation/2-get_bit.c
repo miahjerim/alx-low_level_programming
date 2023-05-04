@@ -1,8 +1,8 @@
 #include "main.h"
-/*
- * get_bit -prints the return value of a bit at a given index.
- * @n: The number whose bit value is to be returned
- * index: The index of the bit to be returned
+/**
+ * get_bit - prints the return value of a bit at a given index.
+ * @n: unsigned long int, The number whose bit value is to be returned
+ * @index: The index of the bit to be returned
  *
  * Return: -1 if an error occurred
  */
