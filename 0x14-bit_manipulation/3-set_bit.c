@@ -8,13 +8,17 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
+	/*unsigned int variable decleared*/
+	unsigned int i;
 	/*if function checking if the index is valid*/
-	if (index >= sizeof(unsigned long int) * 8)
+	if (index > 63)
 	{
-		return (0);
+		return (-1);
 	}
 	/*set the bit at the given index*/
-	*n |= (1UL << index);
+	i = 1 << index;
+	*n = (*n | i);
+
 	/*return 1 if successfully set,0 otherwise*/
 	return (1);
 }
