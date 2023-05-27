@@ -9,34 +9,24 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, letters, wr;
+	int p, t, len = 0;
 
-	/*check if filename is NULL*/
-	if (!filename)
+	if (filename == NULL)
 		return (-1);
 
-	/*open the file in append mode*/
-	fd = open(filename, O_WRONLY | O_APPEND);
-
-	/*check for errors opening file*/
-	if (fd == -1)
-		return (-1);
-
-	/*if file is not NULL write text_content*/
-	if (text_content)
+	if (text_content != NULL)
 	{
-		for (letters = 0; text_content[letters]; letters++)
-			;
-
-		wr = write(fd, text_content, letters);
-
-		/*check for errors*/
-		if (wr == -1)
-			return (-1);
+		for (len = 0; text_content[len];)
+			len++;
 	}
 
-	/*close and return 1 on success*/
-	close(fd);
+	p = open(filename, O_WRONLY | O_APPEND);
+	t = write(p, text_content, len);
+
+	if (p == -1 || t == -1)
+		return (-1);
+
+	close(p);
 
 	return (1);
 }
